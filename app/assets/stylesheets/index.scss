@@ -1,3 +1,18 @@
 // Place all the styles related to the Index controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.navbar {
+    overflow: hidden;
+    background-color: #046A38;
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+.navbar h1{
+    color: #B9975B;
+    text-align: center;
+    text-decoration: none;
+}
+.navbar a{
+    text-decoration: none;
+}
