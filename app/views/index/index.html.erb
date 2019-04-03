@@ -4,43 +4,45 @@
     <a href = "https://2fd169176389422c91e6f777bd75e4a9.vfs.cloud9.us-east-2.amazonaws.com/"><h1>Express Line</h1></a>
 </div>
 <<<<<<< HEAD
-<br>S
+<br>.
 <h2><strong>List of restaurants</strong></h2>
-
+<% @foods.each do |food| %>
 <div class = "a">
     
-        <img src = "https://www.thefirstteeupstate.org/wp-content/uploads/sites/148/2016/07/Bojangles-Logo.png" alt="Bojangles"
+        <img src = "http://www.chick-fil-a.com/-/media/Images/CFACOM/Default-Images/chick-fil-a-logo-vector.ashx"
+        alt="Bojangles"
         width = "200", align="left">
         <p>
         <div class="title">
-            Bojangles
+            <td><%= food.name %></td>
             
         </div>
         <br>
-        <strong>Location: </strong>Student Union
+        <strong>Location: </strong>Prospector
+        <td><%= food.description %></td>
         <br>
         
         
         </p>
 </div>
-<!-- Panda Express -->
+<% end %>
+<!-- Feisty's 
 <br>
-<img src = "https://upload.wikimedia.org/wikipedia/en/thumb/8/85/Panda_Express_logo.svg/800px-Panda_Express_logo.svg.png"
-alt="Panda Express" width = "200">
-<ul class = "side-info">
-    <p><strong>Name: </strong><br>
-    <strong>Location: </strong><br>
-    <strong>Description: </strong><br>
-    <strong>Catagory: </strong><br>
-    <strong>Hours: </strong><br>
-    </p>
-</ul>  
+<div class = "a">
+<img src = "https://aux.uncc.edu/sites/aux.uncc.edu/files/media/logos/logo_feistys.png"
+alt="Panda Express" width = "200", align="left">
+<p>
+        <div class="title">
+            Feisty's
+            
+        </div>
+        <br>
+        <strong>Location: </strong>Prospector
+        <br>
+</p>
+  
 </div>
-
-
-
-
-
+-->
 <footer>
     <p>&copy; 2019</p>
 </footer>
