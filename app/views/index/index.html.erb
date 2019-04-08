@@ -5,11 +5,14 @@
 </div>
 <<<<<<< HEAD
 <br>.
+
+
 <h2><strong>List of restaurants</strong></h2>
 <% @foods.each do |food| %>
 <br>
 <div class = "a">
     
+<<<<<<< HEAD
         <img src = "http://www.chick-fil-a.com/-/media/Images/CFACOM/Default-Images/chick-fil-a-logo-vector.ashx"
         alt="Chick-Fil-A"
         width = "200", align="left">
@@ -21,6 +24,19 @@
         <br>
         <strong>Location: </strong>Prospector
         <br>
+=======
+        <img src = "/images/fiesty.jpg"
+        alt="Chickfila"
+        width = "200", align="left">
+        <p>
+        <div class="title" > 
+            <td><%= food.name %></td>
+        </div>
+        <br>
+        <strong>Location: <td><%= food.location %></td></strong><br>
+        <strong>Hours: <td><%= food.hours %></td></strong><br>
+        <strong>Rating: <td><%= food.rating %></td></strong><br>
+>>>>>>> 93edc37097bbe0672abd816ae01960b6bfc87173
         <td><%= food.desc %></td>
         <br>
         
