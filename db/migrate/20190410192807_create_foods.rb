@@ -4,8 +4,8 @@ class CreateFoods < ActiveRecord::Migration[5.2]
       t.string :name
       t.integer :Ident
       t.string :desc
-      t.string :picAdd
       t.string :location
+      t.string :picAdd
       t.string :category
       t.string :hours
       t.integer :rating
