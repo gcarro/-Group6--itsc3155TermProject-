@@ -10,11 +10,12 @@
 <% @foods.each do |food| %>
 <br>
 <div class = "a">
-        <img src = "http://www.chick-fil-a.com/-/media/Images/CFACOM/Default-Images/chick-fil-a-logo-vector.ashx"
+        <img src = "<%= food.picAdd %>"
         alt="Chick-Fil-A"
-        width = "300", align="left">
+        width = "300", height = "200", align="left">
         <p>
         <div class="title">
+            
             <a href="description.html.erb"><button><td><%= food.name %></td></button></a>
             
         </div>
