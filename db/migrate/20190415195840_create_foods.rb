@@ -9,6 +9,8 @@ class CreateFoods < ActiveRecord::Migration[5.2]
       t.string :category
       t.string :hours
       t.integer :rating
+      t.string :menu
+      t.string :lineLength
 
       t.timestamps
     end
