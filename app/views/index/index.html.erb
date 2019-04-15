@@ -12,11 +12,13 @@
 <div class = "a">
         <img src = "<%= food.picAdd %>"
         alt="Chick-Fil-A"
-        width = "300", height = "200", align="left">
+        width = "300", align="left">
         <p>
         <div class="title">
-            
-            <a href="description.html.erb"><button><td><%= food.name %></td></button></a>
+            <form id="ident" action="/reviews" method="get">
+            <input type="hidden" id="foodId" name="foodId" value="<%= food.Ident %>">
+            <button type="submit"><td><%= food.name %></td></button>
+        </form>
             
         </div>
         <br>
@@ -24,12 +26,13 @@
         <strong>Hours: <td><%= food.hours %></td></strong><br>
         <strong>Rating: <td><%= food.rating %></td></strong><br>
         <td><%= food.desc %></td>
-        <br>
-        
+       
         
         </p>
 </div>
 <% end %>
+
+
 
 
 <footer>
