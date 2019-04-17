@@ -4,10 +4,10 @@ class ReviewsController < ApplicationController
         @reviews = Review.all
         puts params[:foodId]
         
-        @foods = Food.find(params[:foodId])
-        puts @foods.name
-        @reviews = Review.where(:ident => params[:foodId])
-        render "description.html.erb",food: @foods
+        @foods = Food.find_by_Ident(params[:foodId])
+        
+        @reviews = Review.find_by_ident(params[:foodId])
+        render "description.html.erb",food: @foods,review: @reviews
     end
     
     def new
