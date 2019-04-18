@@ -14,5 +14,9 @@ class ReviewsController < ApplicationController
         @reviews = Review.new
     end
     
-   
+    def create
+        @reviews = Review.new(params[:reviewId], params[:ident], params[:username], params[:body])
+        @reviews.save
+        redirect_to @reviews
+    end
 end
