@@ -13,7 +13,10 @@ class ReviewsController < ApplicationController
     def new
         @reviews = Review.new
     end
-    
+    def show
+       @foods = Food.all
+        render "index.html.erb"
+    end
     def create
         @reviews = Review.new(params[:reviewId], params[:ident], params[:username], params[:body])
         @reviews.save

@@ -5,7 +5,9 @@ feature "User sees the home page" do
         visit "/index"
         expect(page).to have_content("Express Line")
     end
-    scenario "User can see the datailed page" do
-        
+    scenario "User can see the datailed page for chick-fil-a" do
+         visit "/reviews/show"
+         expect(page).to have_content("Express Line")
     end
 end
+
