@@ -1,17 +1,49 @@
 <!DOCTYPE html>
 <html>
-<div class = "navbar">
-    <a href = "https://c7922496df0449ad86e6b9f01b836574.vfs.cloud9.us-east-2.amazonaws.com"><h1>Express Line</h1></a>
-</div>
-<br>.
-
-<h1><center><%= @foods.name %></center></h1>
-
-<img src = "<%= @foods.picAdd %>"
-        alt="Logo"
-        width = "300", height = "150", align="left">
+    <head>
         
+    </head>
+    <!-- CSS style, can move into new file later -->
+    <style>
+        .content{
+            position: right;
+            overflow: auto;
+            style="max-width:600px"
+            text-align: right;
+            padding-left: 200px;
+            font-family: Bradley Hand, Trattatello;
+            
+        }
+        .page {
+            background-color: #B9975B;
+        }
         
-        <a href = "<%= @foods.menu %>">Menu</a>
+        .menu {
+            border-style: solid;
+            border-width: 5px;
+            border-color: blue;
+            font-size: 50px;
+        }
+    </style>
+    
+    <!-- Page Content -->
+    <body class = "page">
+        <div class = "navbar">
+        <a href = "https://c7922496df0449ad86e6b9f01b836574.vfs.cloud9.us-east-2.amazonaws.com"><h1>Express Line</h1></a></div>
+        <h1><center><%= @foods.name %></center></h1>
+        <img src = "<%= @foods.picAdd %>" alt="Logo" width = "auto" align="left"><br>
+        
+        <!-- Main content -->
+        <section class = "content">
+            <p>Name: <%= @foods.name %></p>
+            <p>Food Location: <%= @foods.location %></p>
+            <p>Hours: <%= @foods.hours %></p>
+            <p>Line length <%= @foods.lineLength %></p>
+            <p>Food rating: <%= @foods.rating %></p>
+            <span class = "menu"><a href = "<%= @foods.menu %>">Menu</a></span>
+        </section>
+        
+    </body>
+    
 
 </html>
