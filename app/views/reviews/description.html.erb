@@ -1,39 +1,5 @@
 <!DOCTYPE html>
 <html>
-<<<<<<< HEAD
-    <head>
-        
-    </head>
-    <!-- CSS style, can move into new file later -->
-    <style>
-        .content{
-            position: right;
-            overflow: auto;
-            style="max-width:600px"
-            text-align: right;
-            padding-left: 200px;
-            font-family: Bradley Hand, Trattatello;
-            
-        }
-        .page {
-            background-color: #B9975B;
-        }
-        
-        .menu {
-            border-style: solid;
-            border-width: 5px;
-            border-color: blue;
-            font-size: 50px;
-        }
-    </style>
-    
-    <!-- Page Content -->
-    <body class = "page">
-        <div class = "navbar">
-        <a href = "https://c7922496df0449ad86e6b9f01b836574.vfs.cloud9.us-east-2.amazonaws.com"><h1>Express Line</h1></a></div>
-        <h1><center><%= @foods.name %></center></h1>
-        <img src = "<%= @foods.picAdd %>" alt="Logo" width = "auto" align="left"><br>
-=======
 <div class = "navbar">
     <a href = "https://c7922496df0449ad86e6b9f01b836574.vfs.cloud9.us-east-2.amazonaws.com"><h1>Express Line</h1></a>
 </div>
@@ -44,7 +10,6 @@
 <img src = "<%= @foods.picAdd %>"
         alt="Logo"
         width = "300", height = "150", align="left">
->>>>>>> 4e50c56c620a8a73ebb692795306cc91eb587257
         
         <!-- Main content -->
         <section class = "content">
@@ -55,7 +20,16 @@
             <p>Food rating: <%= @foods.rating %></p>
             <span class = "menu"><a href = "<%= @foods.menu %>">Menu</a></span>
         </section>
-        
+        <form id="newRev" action="/reviews" method="post">
+            <input type="hidden" id="foodId" name="foodId" value="<%= @foods.Ident %>">
+            <input type="text" id="username" name="username">
+            <input type="text" id="body" name="body">
+            <button type="submit" id="newRev">test</button>
+      </form>
+      <% @reviews.each do |review| %>
+      <p> Username : <%= review.username %></p>
+      <p> Body : <%= review.body %> </p>
+      <% end %>
     </body>
     
 

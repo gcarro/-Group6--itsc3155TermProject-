@@ -1,13 +1,12 @@
 class ReviewsController < ApplicationController
+    skip_before_action :verify_authenticity_token
     def index
        
-        @reviews = Review.all
         puts params[:foodId]
-        
         @foods = Food.find_by_Ident(params[:foodId])
-        
-        @reviews = Review.find_by_ident(params[:foodId])
-        render "description.html.erb",food: @foods,review: @reviews
+        @reviews = Review.where({ident: params[:foodId]})
+        puts @reviews
+        render "description.html.erb"
     end
     
     def new
@@ -18,8 +17,16 @@ class ReviewsController < ApplicationController
         render "index.html.erb"
     end
     def create
-        @reviews = Review.new(params[:reviewId], params[:ident], params[:username], params[:body])
+        @reviews = Review.new
+        @reviews.ident = params[:foodId]
+        @reviews.username = params[:username]
+        @reviews.body = params[:body]
         @reviews.save
-        redirect_to @reviews
+        redirect_to "/reviews?foodId=" + params[:foodId]
     end
 end
+
+private
+    def review_params
+        params.require().permit(:foodId, :username, :body)
+    end
