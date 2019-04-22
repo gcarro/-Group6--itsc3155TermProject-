@@ -41,7 +41,9 @@
         <form id="newRev" action="/reviews" method="post">
             <input type="hidden" id="foodId" name="foodId" value="<%= @foods.Ident %>">
             <input type="text" id="username" name="username" value = "Enter UNCC username">
-            <input type="text" id="body" name="body" value = "Comment">
+            <br>
+            <textarea type="text" id="body" name="body" value = "Comment" rows = "10" cols = "40"></textarea>
+            
             <button class = "submitButton" type="submit" id="newRev">Submit</button>
         </form>
     
