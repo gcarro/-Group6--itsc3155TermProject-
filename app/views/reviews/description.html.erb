@@ -3,8 +3,9 @@
 <div class = "navbar">
     <a href = "https://c7922496df0449ad86e6b9f01b836574.vfs.cloud9.us-east-2.amazonaws.com"><h1>Express Line</h1></a>
 </div>
+
 <br>.
-<h1> Detailed Page</h1>
+
 <h1><center><%= @foods.name %></center></h1>
 
 <img src = "<%= @foods.picAdd %>"
@@ -22,13 +23,13 @@
         </section>
         <form id="newRev" action="/reviews" method="post">
             <input type="hidden" id="foodId" name="foodId" value="<%= @foods.Ident %>">
-            <input type="text" id="username" name="username">
-            <input type="text" id="body" name="body">
-            <button type="submit" id="newRev">test</button>
-      </form>
+            <input type="text" id="username" name="username" value = "Enter UNCC username">
+            <input type="text" id="body" name="body" value = "Comment">
+            <button class = "button" type="submit" id="newRev">Submit</button>
+        </form>
       <% @reviews.each do |review| %>
       <p> Username : <%= review.username %></p>
-      <p> Body : <%= review.body %> </p>
+      <p> Comment : <%= review.body %> </p>
       <% end %>
     </body>
     
