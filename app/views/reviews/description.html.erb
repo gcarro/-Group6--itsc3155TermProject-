@@ -1,25 +1,44 @@
 <!DOCTYPE html>
 <html>
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+    .checked {
+      color: yellow;
+    }
+    body {
+        background-color: 	#DAA520;
+    }
+    </style>
+</head>
+
 <div class = "navbar">
     <a href = "https://c7922496df0449ad86e6b9f01b836574.vfs.cloud9.us-east-2.amazonaws.com"><h1>Express Line</h1></a>
 </div>
-
 
 <h1><center><%= @foods.name %></center></h1>
         
         <!-- Main content -->
         <img src = "<%= @foods.picAdd %>" alt="Logo" width = "300", height = "170", align="left" class = "image">
-        <section class = "content">
+        <section class = "sideInfo">
             
             <section class = "sideInfo">
             <p><b>Name: </b><%= @foods.name %></p>
             <p><b>Food Location:</b> <%= @foods.location %></p>
             <p><b>Hours:</b> <%= @foods.hours %></p>
             <p><b>Line length</b> <%= @foods.lineLength %></p>
-            <p><b>Food rating:</b> <%= @foods.rating %></p>
+            <span><b>Food rating:</b> <%= @foods.rating %></span>
+            <!-- Stars need to connect  this with active record -->
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star"></span>
             </section>
             
         </section>
+        <br>
+        <br>
         <span class = "menu"><a href = "<%= @foods.menu %>">Menu</a></span>
         <form id="newRev" action="/reviews" method="post">
             <input type="hidden" id="foodId" name="foodId" value="<%= @foods.Ident %>">
@@ -28,13 +47,17 @@
             <button class = "button" type="submit" id="newRev">Submit</button>
         </form>
     
-      <h1>Reviews</h1>    
+      <h1>Reviews</h1>
       <hr>
       <% @reviews.each do |review| %>
       <p> Username : <%= review.username %></p>
       <p> Comment : <%= review.body %> </p>
       <hr>
       <% end %>
+      
+      <span id = "star">something</span>
+      
+      
     </body>
     
 
