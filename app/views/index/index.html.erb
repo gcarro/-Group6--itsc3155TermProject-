@@ -1,49 +1,3 @@
-<!--
-
-<!DOCTYPE html>
-<html>
-<div class = "navbar">
-    <a href = "https://c7922496df0449ad86e6b9f01b836574.vfs.cloud9.us-east-2.amazonaws.com"><h1>Express Line</h1></a>
-</div>
-<br>.
-
-
-<h2><strong>List of restaurants</strong></h2>
-<% @foods.each do |food| %>
-<br>
-<div class = "a">
-        <img src = "<%= food.picAdd %>"
-        alt="Chick-Fil-A"
-        width = "300", align="left">
-        <p>
-        <div class="title">
-            <form id="ident" action="/reviews" method="get">
-            <input type="hidden" id="foodId" name="foodId" value="<%= food.Ident %>">
-            <button type="submit"><td><%= food.name %></td></button>
-        </form>
-            
-        </div>
-        <br>
-        <strong>Location: <td><%= food.location %></td></strong><br>
-        <strong>Hours: <td><%= food.hours %></td></strong><br>
-        <strong>Rating: <td><%= food.rating %></td></strong><br>
-        <td><%= food.desc %></td>
-       
-        
-        </p>
-</div>
-<% end %>
-
-
-
-
-<footer>
-    <p>&copy; 2019</p>
-</footer>
-</html>
->>>>>>> f228bb7fb6608bb27c85a430ffc787522c6b3ebf
--->
-
 <!DOCTYPE html>
 <html>
 <title>Express Line</title>
@@ -72,7 +26,7 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Karma", sans-serif}
       </form>
       <form id="ident" action="/reviews" method="get">
             <input type="hidden" id="foodId" name="foodId" value="<%= food.Ident %>">
-            <button type="submit" id="foodName"><%= food.name %></button>
+            <b><button type="submit" id="foodName"><%= food.name %></button></b>
       </form>
       <p><%= food.desc %></p>
       </form>

@@ -24,7 +24,8 @@
             <p><b>Name: </b><%= @foods.name %></p>
             <p><b>Food Location:</b> <%= @foods.location %></p>
             <p><b>Hours:</b> <%= @foods.hours %></p>
-            <p><b>Line length: </b> <%= @foods.lineLength %></p>
+            <a href="<%= @foods.lineLength %>">Length of the line</a>
+            <br><br>
             <span><b>Food rating:</b> </span>
             <!-- Stars, need to connect  this with active record to show correct amount of stars per resturant -->
             <span class="fa fa-star checked"></span>
