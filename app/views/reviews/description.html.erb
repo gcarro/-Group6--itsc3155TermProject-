@@ -6,9 +6,7 @@
     .checked {
       color: yellow;
     }
-    body {
-        background-color: 	#DAA520;
-    }
+    
     </style>
 </head>
 
@@ -28,7 +26,7 @@
             <p><b>Hours:</b> <%= @foods.hours %></p>
             <p><b>Line length</b> <%= @foods.lineLength %></p>
             <span><b>Food rating:</b> <%= @foods.rating %></span>
-            <!-- Stars need to connect  this with active record -->
+            <!-- Stars, need to connect  this with active record to show correct amount of stars per resturant -->
             <span class="fa fa-star checked"></span>
             <span class="fa fa-star checked"></span>
             <span class="fa fa-star checked"></span>
@@ -44,7 +42,7 @@
             <input type="hidden" id="foodId" name="foodId" value="<%= @foods.Ident %>">
             <input type="text" id="username" name="username" value = "Enter UNCC username">
             <input type="text" id="body" name="body" value = "Comment">
-            <button class = "button" type="submit" id="newRev">Submit</button>
+            <button class = "submitButton" type="submit" id="newRev">Submit</button>
         </form>
     
       <h1>Reviews</h1>
@@ -54,9 +52,6 @@
       <p> Comment : <%= review.body %> </p>
       <hr>
       <% end %>
-      
-      <span id = "star">something</span>
-      
       
     </body>
     
