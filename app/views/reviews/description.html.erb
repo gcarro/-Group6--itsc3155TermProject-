@@ -46,12 +46,14 @@
         </section>
             
             <img src = "<%= @foods.lineLength %> " width ="700" height= "400" float ="right">
-            <p> Line intesity based on a scale from 0(Short)-5(Long) in terms of line length</p>
+            
             
         
         <br>
         <br>
-        <h3> Enter New Review </h3>
+        <section style = "color: black;">
+            <p> Line intesity based on a scale from 0(Short)-5(Long) in terms of line length</p>
+            <h3> Enter New Review </h3>
         <form id="newRev" action="/reviews" method="post">
             <input type="hidden" id="foodId" name="foodId" value="<%= @foods.Ident %>">
             <input type="text" id="username" name="username" value = "Enter UNCC username">
@@ -67,12 +69,15 @@
       <div>
           <div>
               
-              <span> <b>Username :</b> <%= review.username %></span><br>
-              <span> <b>Comment :</b> <%= review.body %> </span>
+              <span style = "color: #B9975B;"> <b>Username :</b> <%= review.username %></span><br>
+              <span style = "color: #046A38;"> <b>Comment :</b> <%= review.body %> </span>
               <hr>
               <% end %>
           </div>
       </div>
+      
+        </section>
+        
       
     </body>
     
