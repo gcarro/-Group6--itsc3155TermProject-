@@ -51,10 +51,15 @@
       <h1>Reviews</h1>
       <hr>
       <% @reviews.each do |review| %>
-      <p> Username : <%= review.username %></p>
-      <p> Comment : <%= review.body %> </p>
-      <hr>
-      <% end %>
+      <div>
+          <div>
+              
+              <span> <b>Username :</b> <%= review.username %></span><br>
+              <span> <b>Comment :</b> <%= review.body %> </span>
+              <hr>
+              <% end %>
+          </div>
+      </div>
       
     </body>
     
