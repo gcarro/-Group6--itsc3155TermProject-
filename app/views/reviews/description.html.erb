@@ -6,6 +6,9 @@
     .checked {
       color: yellow;
     }
+    h3{
+        font-size: 18px;
+    }
     
     </style>
 </head>
@@ -24,8 +27,7 @@
             <p><b>Name: </b><%= @foods.name %></p>
             <p><b>Food Location:</b> <%= @foods.location %></p>
             <p><b>Hours:</b> <%= @foods.hours %></p>
-            <a href="<%= @foods.lineLength %>">Length of the line</a>
-            <br><br>
+            <p><b>Menu:</b>  <span class = "menu"><a href = "<%= @foods.menu %>">Menu</a></span> </p>
             <span><b>Food rating:</b> </span>
             <!-- Stars, need to connect  this with active record to show correct amount of stars per resturant -->
             <span class="fa fa-star checked"></span>
@@ -34,11 +36,12 @@
             <span class="fa fa-star checked"></span>
             <span class="fa fa-star"></span>
             </section>
-            
+            <img src = "<%= @foods.lineLength %> " width ="700" height= "400" float ="right">
+            <p> Line intesity based on a scale from 0(Short)-5(Long) in terms of line length</p>
         </section>
         <br>
         <br>
-        <span class = "menu"><a href = "<%= @foods.menu %>">Menu</a></span>
+        <h3> Enter New Review </h3>
         <form id="newRev" action="/reviews" method="post">
             <input type="hidden" id="foodId" name="foodId" value="<%= @foods.Ident %>">
             <input type="text" id="username" name="username" value = "Enter UNCC username">
